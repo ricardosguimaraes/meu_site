@@ -15,11 +15,10 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Inscreva-se na Newsletter de {person.firstName}</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Ocasionalmente escrevo sobre design, tecnologia e compartilho pensamentos sobre a interseção entre criatividade e engenharia.
     </>
   ),
 };
@@ -52,28 +51,28 @@ const social = [
 const home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Início",
+  title: `Portfólio de ${person.name}`,
+  description: `Site de portfólio apresentando meu trabalho como ${person.role}`,
+  headline: <>Construindo pontes entre design e código</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Projeto recente: <strong className="ml-4">Once UI</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Sou Selene, engenheira de design na <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, onde crio experiências de usuário intuitivas.
+      <br /> No tempo livre, desenvolvo meus próprios projetos.
     </>
   ),
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Sobre",
+  title: `Sobre – ${person.name}`,
+  description: `Conheça ${person.name}, ${person.role} de ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -87,38 +86,34 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introdução",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Selene é uma engenheira de design baseada em Jacarta, apaixonada por transformar desafios complexos em soluções de design simples e elegantes. Seu trabalho abrange interfaces digitais, experiências interativas e a convergência entre design e tecnologia.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiência Profissional",
     experiences: [
       {
         company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        timeframe: "2022 - Presente",
+        role: "Engenheira de Design Sênior",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesenhou a UI/UX da plataforma FLY, resultando em um aumento de 20% no engajamento dos usuários e 30% mais rapidez no carregamento.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Liderou a integração de ferramentas de IA nos fluxos de design, permitindo que designers iterassem 50% mais rápido.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Projeto Once UI",
             width: 16,
             height: 9,
           },
@@ -127,15 +122,13 @@ const about = {
       {
         company: "Creativ3",
         timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        role: "Designer Líder",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Desenvolveu um sistema de design que unificou a marca em múltiplas plataformas, melhorando a consistência visual em 40%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Liderou uma equipe multifuncional para lançar uma nova linha de produtos, contribuindo para um aumento de 15% na receita da empresa.
           </>,
         ],
         images: [],
@@ -144,36 +137,36 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Formação",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidade de Jacarta",
+        description: <>Estudou engenharia de software.</>,
       },
       {
         name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        description: <>Estudou marketing digital e branding pessoal.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Habilidades Técnicas",
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Capaz de prototipar no Figma com Once UI em velocidade impressionante.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -181,12 +174,12 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Construindo apps de próxima geração com Next.js + Once UI + Supabase.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Imagem do projeto",
             width: 16,
             height: 9,
           },
@@ -199,26 +192,26 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Escrevendo sobre design e tecnologia...",
+  description: `Leia o que ${person.name} tem feito recentemente`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Projetos",
+  title: `Projetos – ${person.name}`,
+  description: `Projetos de design e desenvolvimento por ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Galeria",
+  title: `Galeria de fotos – ${person.name}`,
+  description: `Uma coleção de fotos de ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
