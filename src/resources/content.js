@@ -6,11 +6,11 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Desenvolvedor Full Stack",
+  role: "Desenvolvedor Full Stack | Especialista em Web, IA e Automação",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "America/Sao_Paulo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Português"], // optional: Leave the array empty if you don't want to display languages
+  email: "contato@ricardodesenvolvedor.com.br",
+  location: "America/Sao_Paulo", // IANA time zone válido para São Paulo
+  languages: ["Português"],
 };
 
 const newsletter = {
@@ -24,22 +24,30 @@ const newsletter = {
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/ricardosguimaraes",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/web-ricardo",
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/ricardodesenvolvedor/",
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/@ricardodesenvolvedor",
+  },
+  {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/5519999942464",
   },
   {
     name: "Email",
@@ -89,46 +97,35 @@ const about = {
     title: "Introdução",
     description: (
       <>
-        Selene é uma engenheira de design baseada em Jacarta, apaixonada por transformar desafios complexos em soluções de design simples e elegantes. Seu trabalho abrange interfaces digitais, experiências interativas e a convergência entre design e tecnologia.
+        {person.name} é um desenvolvedor Full Stack com sólida experiência em desenvolvimento web, aplicações no-code/low-code, automação de processos e ferramentas baseadas em inteligência artificial. Atua com tecnologias modernas e frameworks robustos, entregando soluções eficientes, escaláveis e com foco em performance.
+        <br />
+        Domina WordPress avançado, ferramentas como FlutterFlow, Bubble, n8n, e IA aplicada à produtividade com GitHub Copilot, Cursor e afins.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Experiência Profissional",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Presente",
-        role: "Engenheira de Design Sênior",
+        company: "Agência Colors",
+        timeframe: "2020 – Atual",
+        role: "Desenvolvedor Full Stack",
         achievements: [
           <>
-            Redesenhou a UI/UX da plataforma FLY, resultando em um aumento de 20% no engajamento dos usuários e 30% mais rapidez no carregamento.
+            Desenvolvimento de sites e sistemas personalizados com foco em performance e usabilidade
           </>,
           <>
-            Liderou a integração de ferramentas de IA nos fluxos de design, permitindo que designers iterassem 50% mais rápido.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Projeto Once UI",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Designer Líder",
-        achievements: [
-          <>
-            Desenvolveu um sistema de design que unificou a marca em múltiplas plataformas, melhorando a consistência visual em 40%.
+            Aplicações em WordPress com Elementor Pro, JetEngine e WooCommerce
           </>,
           <>
-            Liderou uma equipe multifuncional para lançar uma nova linha de produtos, contribuindo para um aumento de 15% na receita da empresa.
+            Criação de apps mobile com FlutterFlow e sistemas com Bubble.io
+          </>,
+          <>
+            Automação de processos com n8n, integrações via APIs
+          </>,
+          <>
+            Uso de IA (Copilot, Cursor) para acelerar o desenvolvimento
           </>,
         ],
         images: [],
@@ -136,54 +133,71 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Formação",
+    display: true,
+    title: "Formação Acadêmica",
     institutions: [
       {
-        name: "Universidade de Jacarta",
-        description: <>Estudou engenharia de software.</>,
+        name: "Faculdade Anhanguera – Campinas/SP",
+        description: <>MBA em Marketing Digital</>,
       },
       {
-        name: "Build the Future",
-        description: <>Estudou marketing digital e branding pessoal.</>,
+        name: "Faculdade Anhanguera – Campinas/SP",
+        description: <>Tecnólogo em Análise e Desenvolvimento de Sistemas</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Habilidades Técnicas",
+    display: true,
+    title: "Competências Técnicas",
     skills: [
       {
-        title: "Figma",
-        description: <>Capaz de prototipar no Figma com Once UI em velocidade impressionante.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Imagem do projeto",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Imagem do projeto",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Frontend",
+        description: <>
+          HTML5, CSS3, JavaScript, TypeScript, React.js, Next.js, Vue.js (básico), Bootstrap, Tailwind CSS, Figma
+        </>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Construindo apps de próxima geração com Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Imagem do projeto",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Backend",
+        description: <>
+          Node.js (Express, NestJS), PHP (Laravel, Slim), API REST / GraphQL, JWT / OAuth, WebSockets
+        </>,
+        images: [],
+      },
+      {
+        title: "Banco de Dados",
+        description: <>
+          MySQL, PostgreSQL, MongoDB, Prisma ORM, Sequelize
+        </>,
+        images: [],
+      },
+      {
+        title: "WordPress & CMS",
+        description: <>
+          WordPress Avançado, Elementor, JetEngine, CPT UI, ACF, WooCommerce, Crocoblock
+        </>,
+        images: [],
+      },
+      {
+        title: "No-Code & Low-Code",
+        description: <>
+          Bubble.io, FlutterFlow, Webflow, Glide, Zapier, Make, n8n (Automação de Workflows)
+        </>,
+        images: [],
+      },
+      {
+        title: "IA e Produtividade",
+        description: <>
+          GitHub Copilot, Cursor, Codeium, TabNine, ChatGPT
+        </>,
+        images: [],
+      },
+      {
+        title: "Ferramentas e Metodologias",
+        description: <>
+          Git, GitHub, GitLab, Docker, Postman, Insomnia, CI/CD, Scrum / Kanban, SEO técnico, Google Analytics
+        </>,
+        images: [],
       },
     ],
   },
