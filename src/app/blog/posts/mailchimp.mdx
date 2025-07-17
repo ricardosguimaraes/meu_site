@@ -1,68 +1,67 @@
 ---
-title: "Set up Mailchimp and collect emails"
-summary: "Set up the Mailchimp newsletter block for your Magic Portfolio."
+title: "Configure o Mailchimp e colete e-mails"
+summary: "Configure o bloco de newsletter do Mailchimp para seu Magic Portfolio."
 publishedAt: "2025-04-16"
 tag: "Magic Portfolio"
 ---
 
-## Mailchimp account
+## Conta Mailchimp
 
-Sign up for a [Mailchimp account](https://mailchimp.com) and create a new list if you don't have one.
+Crie uma [conta Mailchimp](https://mailchimp.com) e crie uma nova lista caso ainda não tenha uma.
 
-## Embed form
+## Formulário incorporado
 
-Create a new [embed form](https://mailchimp.com/help/add-a-signup-form-to-your-website/) and copy the form URL to your Magic Portfolio config.
+Crie um novo [formulário incorporado](https://mailchimp.com/help/add-a-signup-form-to-your-website/) e copie a URL do formulário para a configuração do seu Magic Portfolio.
 
 <CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const mailchimp = {
+  highlight="2"
+  codes={[
+    {
+      code: `const mailchimp = {
     action: 'https://url/subscribe/post?parameters',
     effects: {
       ...
     }
-};`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+};`,
+      language: "tsx",
+      label: "src/app/resources/config.js",
+    },
+  ]}
+/>
 
-## Newsletter content
+## Conteúdo da newsletter
 
-You can modify the headline and description in the `content.js` file.
+Você pode modificar o título e a descrição no arquivo `content.js`.
 
 <CodeBlock
-    highlight="2"
-    codes={[
-  {
-    code:
-`const newsletter = {
+  highlight="2"
+  codes={[
+    {
+      code: `const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
+    title: <>Inscreva-se na Newsletter de {person.firstName}</>,
     description: (
       <>
-        I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.
+        Ocasionalmente escrevo sobre design, tecnologia e compartilho pensamentos sobre a interseção entre criatividade e engenharia.
       </>
     ),
-};`, 
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+};`,
+      language: "tsx",
+      label: "src/app/resources/content.js",
+    },
+  ]}
+/>
 
-## Background effect
+## Efeito de fundo
 
-There's a pre-configured background in `Mailchimp.tsx` that you can modify in the `mailchimp` object. Set graphic elements such as gradient, dots, lines, and grid and configure their appearance for the newsletter block.
+Há um fundo pré-configurado em `Mailchimp.tsx` que você pode modificar no objeto `mailchimp`. Defina elementos gráficos como gradiente, pontos, linhas e grid e configure sua aparência para o bloco de newsletter.
 
 <CodeBlock
-    codeHeight={24}
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const mailchimp = {
+  codeHeight={24}
+  marginBottom="16"
+  codes={[
+    {
+      code: `const mailchimp = {
     action: 'https://url/subscribe/post?parameters',
     effects: {
       mask: {
@@ -101,8 +100,9 @@ There's a pre-configured background in `Mailchimp.tsx` that you can modify in th
         height: 'var(--static-space-32)'
       }
   }
-}`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+}`,
+      language: "tsx",
+      label: "src/app/resources/config.js",
+    },
+  ]}
+/>

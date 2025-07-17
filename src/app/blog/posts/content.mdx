@@ -1,21 +1,21 @@
 ---
-title: "Updating the content of Magic Portfolio"
-summary: "Personalize the portfolio template with your own content."
+title: "Atualizando o conteúdo do Magic Portfolio"
+summary: "Personalize o template do portfólio com seu próprio conteúdo."
 publishedAt: "2025-04-18"
 tag: "Magic Portfolio"
 ---
 
 ## Avatar
 
-Replace the `public/images/avatar.jpg` file with your own avatar image. It is used on the `/about` page as well as on the dynamically generated `open-graph` images.
+Substitua o arquivo `public/images/avatar.jpg` pela sua própria imagem de avatar. Ela é usada na página `/about` e também nas imagens dinâmicas de open-graph.
 
 ## Favicon
 
-Replace the `src/app/favicon.ico` file with your own favicon.
+Substitua o arquivo `src/app/favicon.ico` pelo seu próprio favicon.
 
-## Content
+## Conteúdo
 
-Replace the content in the `resources/content.js` file with your own content. You can use custom components in most cases, since the props are usually declared as `ReactNode` instead of `string`, but it's important that you need to import them in the file.
+Substitua o conteúdo do arquivo `resources/content.js` pelo seu próprio conteúdo. Você pode usar componentes personalizados na maioria dos casos, já que as props geralmente são declaradas como `ReactNode` ao invés de `string`, mas é importante importar esses componentes no arquivo.
 
 <CodeBlock
     marginBottom="16"
@@ -27,26 +27,25 @@ Replace the content in the `resources/content.js` file with your own content. Yo
 import Link from "next/link";
 
 const person = {
-  ...
+...
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
+language: "tsx",
+label: "src/app/resources/content.js"
+}
 ]} />
 
-The imports above would let us use `InlineCode` and `Link` components in the content file.
+Os imports acima permitem usar os componentes `InlineCode` e `Link` no arquivo de conteúdo.
 
-### Personal details
+### Dados pessoais
 
-Your personal details are used across the whole app to render personalized headings, labels and images. Languages are displayed on the `/about` page, and location and time in the header.
+Seus dados pessoais são usados em todo o app para renderizar títulos, labels e imagens personalizadas. Os idiomas são exibidos na página `/about`, e localização e horário no cabeçalho.
 
 <CodeBlock
-    marginBottom="16"
-    highlight="2-3,7-10"
-    codes={[
-  {
-    code:
-`const person = {
+  marginBottom="16"
+  highlight="2-3,7-10"
+  codes={[
+    {
+      code: `const person = {
     firstName: "Selene",
     lastName: "Yu",
     get name() {
@@ -54,24 +53,24 @@ Your personal details are used across the whole app to render personalized headi
     },
     role: "Design Engineer",
     avatar: "/images/avatar.jpg",
-    location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+    location: "Asia/Jakarta", // Espera-se o identificador de fuso horário IANA, ex: 'Europe/Vienna'
+    languages: ["English", "Bahasa"], // opcional: Deixe o array vazio se não quiser exibir idiomas
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+      language: "tsx",
+      label: "src/app/resources/content.js",
+    },
+  ]}
+/>
 
-### Social links
+### Links sociais
 
-Social links are rendered on the `/about` page and in the footer based on the array configured in the `social` object. You can set custom icons to each, but don't forget to import them in `src/once-ui/icons.ts`. Read the Once UI documentation](https://once-ui.com/docs/icons) for more information.
+Os links sociais são exibidos na página `/about` e no rodapé, baseados no array configurado no objeto `social`. Você pode definir ícones personalizados para cada um, mas não esqueça de importá-los em `src/once-ui/icons.ts`. Leia a [documentação do Once UI](https://once-ui.com/docs/icons) para mais informações.
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const social = [
+  marginBottom="16"
+  codes={[
+    {
+      code: `const social = [
     {
       name: "GitHub",
       icon: "github",
@@ -83,35 +82,36 @@ Social links are rendered on the `/about` page and in the footer based on the ar
       link: "mailto:lorant@once-ui.com",
     },
 ];`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+      language: "tsx",
+      label: "src/app/resources/content.js",
+    },
+  ]}
+/>
 
-### Pages
+### Páginas
 
-Each page have it's own object that manages the personalized content, such as headings, subheadings, images and dynamic data.
+Cada página tem seu próprio objeto que gerencia o conteúdo personalizado, como títulos, subtítulos, imagens e dados dinâmicos.
 
 <CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const home = {
-    label: "Home",
-    title: "Selene Yu's Portfolio",
-    description: "Portfolio website showcasing my work as a Design Engineer",
-    headline: <>Design engineer and builder</>,
+  marginBottom="16"
+  codes={[
+    {
+      code: `const home = {
+    label: "Início",
+    title: "Portfólio de Selene Yu",
+    description: "Site de portfólio apresentando meu trabalho como Design Engineer",
+    headline: <>Engenheira de design e criadora</>,
     subline: (
       <>
-        I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-        <br /> user experiences. After hours, I build my own projects.
+        Sou Selene, engenheira de design na <InlineCode>FLY</InlineCode>, onde crio experiências de usuário intuitivas.
+        <br /> No tempo livre, desenvolvo meus próprios projetos.
       </>
     ),
 };`,
-    language: "tsx",
-    label: "src/app/resources/content.js"
-  }
-]} />
+      language: "tsx",
+      label: "src/app/resources/content.js",
+    },
+  ]}
+/>
 
-The `label` property is used in the header navigation. The `title` property is used for the page title and the `description` property is used for the page description. They are also used in meta- and open graph tags.
+A propriedade `label` é usada na navegação do cabeçalho. A propriedade `title` é usada no título da página e a propriedade `description` é usada na descrição da página. Elas também são usadas em meta tags e open graph.
