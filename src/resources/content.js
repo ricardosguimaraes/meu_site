@@ -62,16 +62,17 @@ const home = {
   label: "Início",
   title: `Portfólio de ${person.name}`,
   description: `Site de portfólio apresentando meu trabalho como ${person.role}`,
-  headline: <>Construindo pontes entre design e código</>,
+  headline: <>Desenvolvedor Full Stack com foco em Web, IA e Automação</>,
   featured: {
     display: true,
-    title: <>Projeto recente: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Projeto recente: <strong className="ml-4">Musictrade</strong></>,
+    href: "/work/musictrade",
   },
   subline: (
     <>
-      Sou Selene, engenheira de design na <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, onde crio experiências de usuário intuitivas.
-      <br /> No tempo livre, desenvolvo meus próprios projetos.
+      Sou {person.name}, desenvolvedor Full Stack com experiência em web, automação e inteligência artificial. <br />
+      Atuo com tecnologias modernas, frameworks robustos e foco em performance. <br />
+      No tempo livre, crio projetos próprios e ajudo empresas a inovar.
     </>
   ),
 };
