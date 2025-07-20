@@ -85,7 +85,11 @@ function slugify(str: string): string {
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
   const CustomHeading = ({ children, ...props }: Omit<React.ComponentProps<typeof HeadingLink>, 'as' | 'id'>) => {
-    const slug = slugify(children as string);
+    const slug = slugify(
+      typeof children === "string"
+        ? children
+        : React.Children.toArray(children).join("")
+    );
     return (
       <HeadingLink
         marginTop="24"
